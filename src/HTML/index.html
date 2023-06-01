@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oversigt over kapsejladser</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/requestHandler.js"></script>
+
+    <style>
+
+        .fl-table td,
+        .fl-table th {
+            font-size: 16px;
+        }
+
+        .table-wrapper {
+            margin: 10px 100px 70px;
+        }
+    </style>
+
+</head>
+
+<header>Sæson oversigt over sejladserne</header>
+<body>
+
+<div class="table-container" id="mainDiv">
+
+    <div class="table-container">
+        <div class="content" id="FOD40DIV">
+            <h1>Top 10 i FOD40</h1>
+
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <td>Stilling</td>
+                        <td>ID</td>
+                        <td>Point</td>
+                    </tr>
+                    </thead>
+                    <tbody id="top10FOD40"></tbody>
+                </table>
+            </div>
+
+
+        </div>
+        <div class="content" id="FOD25TIL40DIV" style="display: block">
+
+            <h1>Top 10 i FOD25TIL40</h1>
+
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <td>Stilling</td>
+                        <td>ID</td>
+                        <td>Point</td>
+                    </tr>
+                    </thead>
+                    <tbody id="tableFOD25TIL40"></tbody>
+                </table>
+            </div>
+
+
+        </div>
+        <div class="content" id="FOD25DIV" style="display: block">
+            <h1>Top 10 i tableFOD25</h1>
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <td>Stilling</td>
+                        <td>ID</td>
+                        <td>Point</td>
+                    </tr>
+                    </thead>
+                    <tbody id="tableFOD25"></tbody>
+                </table>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div class="button-container">
+    <a href="handleBoats.html">
+        <button class="button">Håndter både</button>
+    </a>
+    <a href="handleRaces.html">
+        <button class="button">Håndter kapsejlads</button>
+    </a>
+
+</div>
+</body>
+<script src="../JS/indexPage.js"></script>
+</html>

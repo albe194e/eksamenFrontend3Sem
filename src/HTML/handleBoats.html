@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Her kan du se, oprette, slette og redigere både</title>
+    <script src="../JS/Boats.js"></script>
+    <script src="../JS/handleBoatsPage.js"></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/requestHandler.js"></script>
+</head>
+<header>
+
+    <a href="index.html">
+        <button>
+            Tilbage til forsiden
+        </button>
+    </a>
+    Opret, slet eller opdater en båd her
+</header>
+<body onload="showContent('content4');displayAllBoats()">
+
+<div class="button-container">
+    <button class="button" onclick="showContent('content1'); createBoatDropdown();">Opret ny båd</button>
+    <button id="deleteBtn" class="button" onclick="showContent('content2'); createDeleteTableForBoats()">Slet en båd
+    </button>
+    <button class="button" onclick="showContent('content3'); createEditTableForBoats()">Opdater en båd</button>
+    <button class="button" onclick="showContent('content4'); displayAllBoats()">Se alle både</button>
+
+</div>
+
+<div class="content-section" id="mainDiv">
+
+    <div class="content" id="content1">
+
+        <div class="form-container">
+            <h1>Opret ny Båd</h1>
+            <div class="form-group">
+
+                <label for="boatType">Vælg bådtype: <br> <br></label><select id="boatType" name="boatType">
+
+            </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" onclick="boatsHandler.createNewBoat()">
+            </div>
+        </div>
+
+    </div>
+    <div class="content" id="content2">
+        <h1>Slet en båd her</h1>
+        <hr>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Båd Type</td>
+                </tr>
+                </thead>
+                <tbody id="deleteBoatTable"></tbody>
+            </table>
+        </div>
+
+
+    </div>
+    <div class="content" id="content3">
+        <h1>Opdater en båd her</h1>
+        <hr>
+
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Båd Type</td>
+                </tr>
+                </thead>
+                <tbody id="editTableBoats">
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+    <div class="content" id="content4">
+        <h1>Alle både vises her</h1>
+        <hr>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Båd Type</td>
+                </tr>
+                </thead>
+                <tbody id="allBoatsTable"></tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

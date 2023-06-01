@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Her kan du håndtere alle kapsejladser</title>
+    <script src="../JS/Race.js"></script>
+    <script src="../JS/requestHandler.js"></script>
+    <script src="../JS/handleRacesPage.js"></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<header>
+
+    <a href="index.html">
+        <button>
+            Tilbage til forsiden
+        </button>
+    </a>
+    Tilføj og fjern både i kapsejladserne her, du kan også give point
+</header>
+<body onload="showContent('content1'); showWeeklyRaces()">
+
+<div class="button-container">
+    <button class="button" onclick="showContent('content1'); showWeeklyRaces();">Ugens kapsejladser</button>
+    <button id="deleteBtn" class="button" onclick="showContent('content2'); showUpcommingRaces()">Alle ikke afsluttet
+        kapsejladser
+    </button>
+    <button class="button" onclick="showContent('content3'); showFinishedRaces()">Alle afsluttet kapsejladser</button>
+
+
+</div>
+
+<div class="content-section" id="mainDiv">
+
+    <div class="content" id="content1">
+
+        <h1>Ugens sejladser</h1>
+
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Båd Type</td>
+                    <td>Antal deltagere</td>
+                </tr>
+                </thead>
+                <tbody id="weeklyRacesTable">
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+    <div class="content" id="content2">
+        <h1>Alle ikke afslutter sejladser</h1>
+        <hr>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Båd Type</td>
+                    <td>Antal deltagere</td>
+                </tr>
+                </thead>
+                <tbody id="upcommingRaces">
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+    <div class="content" id="content3">
+        <h1>Afsluttet kapsejladser</h1>
+        <hr>
+
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Båd Type</td>
+                    <td>Antal deltagere</td>
+                </tr>
+                </thead>
+                <tbody id="finishedRaces">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="content" id="specificRace">
+        <h1>Oversigt over kapsejladset</h1>
+
+
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Båd Type</td>
+                    <td>Point</td>
+                </tr>
+                </thead>
+                <tbody id="specificRaceTable">
+
+                </tbody>
+            </table>
+
+            <button id="finishRaceBtn">Afslut kapsejladset her</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
