@@ -146,6 +146,7 @@ async function createRowForRaceTables(table, toAdd, data) {
     for (let i = 0; i < toAdd.length; i++) {
 
 
+
         const td = document.createElement('td');
 
         td.textContent = data[toAdd[i]];
