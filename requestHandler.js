@@ -16,7 +16,7 @@ class Request {
             body: JSON.stringify(this.body)
         }
 
-        return fetch('http://192.168.0.104/' + url, request).then(response => response.json()).then(data => data).catch(error => error);
+        return fetch('https://192.168.0.104/' + url, request).then(response => response.json()).then(data => data).catch(error => error);
 
     }
 }
